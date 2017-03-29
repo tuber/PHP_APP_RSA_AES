@@ -17,8 +17,8 @@ include_once('lib_aes.php');
     {
         $size = mcrypt_get_iv_size(MCRYPT_CAST_256, MCRYPT_MODE_ECB);
         $iv = mcrypt_create_iv($size, MCRYPT_DEV_URANDOM);
-        $key = hash_pbkdf2('md5', 'fwkjb3ljfbizgxc93b', $iv, 8000, 0, false);
-        return $key;
+        return hash_pbkdf2('md5', 'fwkjb3ljfbizgxc93b', $iv, 8000, 0, false);
+       
     }
 
     create_client_aes_key();//60a1334fd8a29962d8c12d318b3175cf
